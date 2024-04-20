@@ -1,0 +1,12 @@
+.filterBtn {
+    height: 100%;
+    border: none;
+    background-color: white;
+    transition: background-color 0.3s ease;
+    padding-right: 10px;
+}
+
+.filterBtn:hover {
+    background-color: lightgray;
+    border-radius: 5px;
+}

@@ -1,0 +1,70 @@
+.btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.userBtns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 10%;
+    margin-right: 15%;
+}
+
+.signupBtn {
+    background: #3090e2;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5%;
+    transition: background-color 0.3s ease;
+}
+
+.signupBtn:hover {
+    background-color: #1f6699;
+}
+
+.loginBtn {
+    background: white;
+    color: black;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5%;
+    transition: background-color 0.3s ease;
+}
+
+
+.loginBtn:hover {
+    background-color: lightgray;
+}
+
+.AQnLogoutBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 20%;
+    margin-right: 6%;
+}
+
+.logoutBtn {
+    background: white;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 15%;
+    transition: background-color 0.3s ease;
+}
+
+.logoutBtn:hover {
+    background-color: gray;
+}

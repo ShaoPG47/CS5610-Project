@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10%;
+    width: 100%;
+    border-bottom: 3px solid lightgray;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 800;
+    width: 20%;
+}
+
+#searchBar {
+    width: 30%;
+    height: 25%;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+}
+
+#searchBar:focus {
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+

@@ -1,0 +1,70 @@
+.questionBody {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between;  */
+    margin-top: 5%;
+    border-bottom: 2px solid lightgray;
+}
+
+.answer_question_view {
+    width: 15%;
+    justify-content: center;
+}
+
+.answer_question_text {
+    width: 60%;
+}
+
+.answer_question_right {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    justify-content: center;
+}
+
+.qCommentsBtns {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    justify-content: center;
+}
+
+.showQcommentsBtn,
+.addQcommentBtn {
+    font-size: xx-small;
+    color:black;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.noAddQcommentBtn {
+    font-size: xx-small;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    color: white;
+    border: gray;
+    border-radius: 8px;
+    background-color: gray;
+    padding: 10px 10px 10px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.noAddQcommentBtn:hover {
+    background-color: black;
+}
+
+.showQcommentsBtn:hover,
+.addQcommentBtn:hover {
+    background-color: lightgray;
+}

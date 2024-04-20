@@ -1,0 +1,65 @@
+/* All the CSS related to answers Page*/
+.answer {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
+}
+
+.answerText {
+    width: 75%;
+}
+
+.answerAuthor {
+    margin-left: 15%;
+}
+
+.answer_author {
+    color: green;
+}
+
+.aCommentsBtns {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    justify-content: center;
+}
+
+.showAcommentsBtn,
+.addAcommentBtn {
+    font-size: xx-small;
+    color:black;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.noAddAcommentBtn {
+    font-size: xx-small;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    color: white;
+    border: gray;
+    border-radius: 8px;
+    background-color: gray;
+    padding: 10px 10px 10px 10px;
+    transition: background-color 0.3s ease;
+}
+
+
+.noAddAcommentBtn:hover {
+    background-color: black;
+}
+
+.showAcommentsBtn:hover,
+.addAcommentBtn:hover {
+    background-color: lightgray;
+}

@@ -9,15 +9,82 @@ For each feature give a name and a one line description.
 
 Clearly indicate which feature is an additional feature for extra credit.
 
-- Feature 1: This is feature 1
+ - Ask questions:<br>
+   - User can ask questions after signup/login
+- Provide answers: <br>
+  - User can answer questions after signup/login
+- search for posts:<br>
+  - User/visitor can search for posts by key words/tags or keywords & tags
+- tag posts: <br>
+  - User can create tags when asking a question
+  - User/visitor can visit Tag page for existing tags
+  - User/visitor can click a question's tag to show all questions that have the same tag
+- comment on questions and answers: <br>
+  - User can add comments to a question or an answer
+  - User/visit can view and hide all comments by clicking Comments button of a question/answer
+- Extra: create their individual user profiles: <br>
+  - User can go to his/her own user page after login/signup
+  - User page shows user's username, user's email, and user created date
+  - User can view all his/her questions that are asked/answered/commented
+- authenticate registered users (i.e., user logins): <br>
+  - User can signup by creating username, password, and email.
+  - User can login with his/her username and password
+  - User can logout after login/signup
+  - User can only ask question, answer question, add comment and go to user page after login/signup
+
+
 
 ## For each feature indicate the test
+The following path contains all my e2e tests, it has 10 sections, 60 tests total
+```py
+../web-dev-final-project-malhar-pengli/testing/cypress/e2e
+```
 
-- Feature 1: /path/to/cypress/test
+- Ask questions:<br>
+  - Section 3
+  - Section 8
+- Provide answers:<br>
+  - Section 5
+  - Section 8
+- search for posts:<br>
+  - Section 4
+- tag posts:<br>
+  - Section 6
+  - Section 9
+- comment on questions and answers:<br>
+  - Section 7
+  - Section 3
+  - Section 5
+- Extra: create their individual user profiles:<br>
+  - Section 10
+- authenticate registered users (i.e., user logins):
+  - Secion 1
+  - Section 2
+
+
+
+
 
 ## For each server endpoint indicate the test
 
-- Endpoint 1: /path/to/server/tests/test-file
+- Answer Comment controller tests
+  - ../web-dev-final-project-malhar-pengli/server/tests/aComment.test.js
+- Answer controller tests
+  - ../web-dev-final-project-malhar-pengli/server/tests/answer.test.js
+- login controller tests
+  - ../web-dev-final-project-malhar-pengli/server/tests/login.test.js
+- signup controller tests
+  - ../web-dev-final-project-malhar-pengli/server/tests/signup.test.js
+- User controller tests
+  - ../web-dev-final-project-malhar-pengli/server/tests/user.test.js
+  - ../web-dev-final-project-malhar-pengli/server/tests/userutils.test.js
+- Question Comment controller tests
+  - ../web-dev-final-project-malhar-pengli/server/tests/qComment.test.js
+- Question controller tests
+  - ../web-dev-final-project-malhar-pengli/server/tests/question.test.js
+- Tag controller tests
+  - ../web-dev-final-project-malhar-pengli/server/tests/tags.test.js
+
 
 ## Instructions to generate and view coverage report 
 

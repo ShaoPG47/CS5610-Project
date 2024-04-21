@@ -8,7 +8,7 @@ const Qcomment = require("../models/qComments");
 const router = express.Router();
 
 const addAcomment = async (req, res) => {
-    const { aid, cmt, qid } = req.body;
+    const { aid, cmt} = req.body;
 
     if (!aid) {
         return res.status(400).json({error: "Answer do not exist"})
@@ -24,7 +24,7 @@ const addAcomment = async (req, res) => {
         })
 
 
-        await newAcomment.save()
+        // await newAcomment.save()
 
         const updatedAnswer = await Answer.findOneAndUpdate(
             {_id: aid},
@@ -34,7 +34,7 @@ const addAcomment = async (req, res) => {
 
         const updatedUser = await User.findOneAndUpdate(
             {username: cmt.cmt_by },
-            {$push: {aComments: newAcomment._id}},
+            {$push:  { aComments: { $each: [newAcomment._id], $position: 0 } } },
             {new: true}
         )
 

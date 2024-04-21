@@ -51,8 +51,8 @@ const checkUsername = async (req, res) => {
 
 const checkUseremail = async(req, res) => {
     const useremail = req.params.useremail;
-    const usernameStatus = await User.findOne({useremail});
-    if (usernameStatus) {
+    const useremailStatus = await User.findOne({useremail});
+    if (useremailStatus) {
         return res.json(true)
     } else {
         return res.json(false)

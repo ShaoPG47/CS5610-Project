@@ -28,7 +28,7 @@ const NewAcomment = ({ qid, aid, handleAnswer, username }) => {
             return;
         }
 
-        const res = await addAcomment(aid, aComment, qid)
+        const res = await addAcomment(aid, aComment)
 
         if (res && res._id) {
             handleAnswer(qid);

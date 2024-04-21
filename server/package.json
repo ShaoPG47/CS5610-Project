@@ -20,6 +20,9 @@
         "mysql": "*"
     },
     "devDependencies": {
-        "eslint": "^8.54.0"
+        "eslint": "^8.54.0",
+        "supertest": "^6.3.4",
+        "mockingoose": "^2.16.2",
+        "mongodb-memory-server": "*"
     }
 }

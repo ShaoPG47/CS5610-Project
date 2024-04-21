@@ -344,7 +344,7 @@ describe("Cypress Tests for Final Project", () => {
         cy.get(".questionComments").should("not.exist")
     })
 
-    it("3.5 | successfully add a comment to a question", () => {
+    it("3.5 | successfully add comments to a question, and the most recent comment should show on the top", () => {
         cy.visit("http://localhost:3000");
         cy.signUp("testuser1", "11223344", "testemail@163.com")
 
@@ -607,7 +607,7 @@ describe("Cypress Tests for Final Project", () => {
         cy.get(".aCommentsBy").should("contain", "rookieman1:");
         cy.get(".aCommentsText").should("contain", "I tried, it didn't work");
 
-        //After hig show comments button again, comment section should be closed and cannot be found
+        //After hit show comments button again, comment section should be closed and cannot be found
         cy.get(".showAcommentsBtn").click();
         cy.get(".answerComments").should("not.exist")
     })

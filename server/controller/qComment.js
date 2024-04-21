@@ -14,7 +14,7 @@ const addQcomment = async (req, res) => {
         question: qid
     })
 
-    await newQcomment.save()
+    // await newQcomment.save()
 
     const updatedQuestion = await Question.findOneAndUpdate(
         {_id: qid },
@@ -25,7 +25,7 @@ const addQcomment = async (req, res) => {
 
     const updatedUser = await User.findOneAndUpdate(
         {username: cmt.cmt_by },
-        {$push: {qComments: newQcomment._id}},
+        {$push: {qComments: {$each: [newQcomment._id], $position: 0}}},
         {new: true}
     )
 

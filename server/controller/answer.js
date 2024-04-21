@@ -8,12 +8,12 @@ const router = express.Router();
 // Adding answer
 const addAnswer = async (req, res) => {
     const { qid, ans } = req.body;
-    const newAnswer = new Answer({
+    const newAnswer = await Answer.create({
         ...ans,
         question: qid
     })
 
-    await newAnswer.save()
+    // await newAnswer.save()
 
     const updatedQuestion = await Question.findOneAndUpdate(
         { _id: qid },
@@ -23,7 +23,7 @@ const addAnswer = async (req, res) => {
 
     const updatedUser = await User.findOneAndUpdate(
         {username: ans.ans_by},
-        {$push: {answers: newAnswer._id}},
+        {$push:  { answers: { $each: [newAnswer._id], $position: 0 } } },
         { new: true}
     )
 

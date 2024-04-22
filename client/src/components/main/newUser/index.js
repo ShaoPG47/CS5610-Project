@@ -70,8 +70,10 @@ const NewUser = ({handleLoggedIn}) => {
 
             try {
                 const user = await addUser({ username, password, useremail });
-                console.log('User registered successfully, welcome! ', user.username, user.createdDate);
-                handleLoggedIn(username, useremail, user.createdDate);
+                const date = new Date()
+                const usercreatedDate = (date.getMonth() +1) + '/' + date.getDate() + '/' + date.getFullYear();
+                console.log('User registered successfully, welcome! ', user.username, usercreatedDate);
+                handleLoggedIn(username, useremail, usercreatedDate);
             } catch (error) {
                 console.error("An unknown error occurred", error.message || "Unknown");
             }

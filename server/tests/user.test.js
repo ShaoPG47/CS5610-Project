@@ -5,8 +5,6 @@ const { default: mongoose } = require("mongoose");
 
 const {getUserQuestions, getUserAnswers, getUserComments } = require('../utils/question')
 
-const Question = require('../models/questions')
-
 //Mocking the models
 jest.mock("../models/questions")
 

@@ -20,7 +20,6 @@ let Acomments = require('./models/aComments')
 
 const init = async () => {
     console.log('insert test data into the database')
-    if (db) db.close();
 
     const t1 = new Tag({ name: 'react' });
     await t1.save();
@@ -134,6 +133,7 @@ const init = async () => {
     });
     await q4.save();
 
+    if (db) db.close();
 
     console.log("done");
 };

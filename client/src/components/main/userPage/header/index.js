@@ -5,7 +5,7 @@ import FilterButton from "./filterButton"
 const UserHeader = ({
     username,
     useremail,
-    userCreatedData,
+    userCreatedDate,
     setQuestionFilter
 }) => {
     return (
@@ -15,7 +15,7 @@ const UserHeader = ({
                 <div className="bold_title" id="useremailUP">{"Email: "+ useremail}</div>
             </div>
             <div className="space_between right_padding">
-                <div className="bold_title" id="createdDateUP">{"You joined us on: " + userCreatedData}</div>
+                <div className="bold_title" id="createdDateUP">{"You joined us on: " + userCreatedDate}</div>
                 <div className="btns">
                     {["Questions Asked", "Questions Answered", "Questions Commented"].map((m, idx) => (
                         <FilterButton

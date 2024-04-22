@@ -1,7 +1,6 @@
 const express = require("express")
 
 const { getUserQuestions, getUserAnswers, getUserComments} = require("../utils/question")
-// const User = require("../models/users")
 
 const router = express.Router();
 

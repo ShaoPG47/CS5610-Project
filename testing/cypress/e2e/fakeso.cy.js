@@ -4,12 +4,20 @@ describe("Cypress Tests for Final Project", () => {
 
     //populate_db
     beforeEach( () => {
-        cy.exec("node ../server/populate_db.js mongodb://127.0.0.1:27017/fake_so");
+        //For local
+        //cy.exec("node ../server/populate_db.js mongodb://127.0.0.1:27017/fake_so");
+
+        //For docker
+        cy.exec("docker exec web-dev-final-project-malhar-pengli-server-1 node /usr/src/app/init.js");
     });
 
     //remove_db
     afterEach(() => {
-        cy.exec("node ../server/remove_db.js mongodb://127.0.0.1:27017/fake_so");
+        //For local
+        //cy.exec("node ../server/remove_db.js mongodb://127.0.0.1:27017/fake_so");
+
+        //For docker
+        cy.exec("docker exec web-dev-final-project-malhar-pengli-server-1 node /usr/src/app/destroy.js");
     });
 
     //Section 1, dealing with unloggedin events
@@ -1051,7 +1059,7 @@ describe("Cypress Tests for Final Project", () => {
         const username = "testuser6"
         const useremail = "testuser6@neu.edu"
         const date = new Date()
-        const userCreatedData = date.getMonth() + '/' + date.getDate() + '/' + date.getFullYear()
+        const userCreatedData = (date.getMonth()+1) + '/' + date.getDate() + '/' + date.getFullYear()
         cy.signUp(username, "11223344","testuser6@neu.edu")
 
         cy.contains(username).click()
@@ -1163,12 +1171,11 @@ describe("Cypress Tests for Final Project", () => {
         cy.contains("test question 1")
     })
 
-    it("10.8 | All unique questions that user commented should be show in Question Commented", () => {
+    it("10.8 | All unique questions that user commented should be show in Question Commented, order by user commented time", () => {
         const qList = [
-            "Quick question about storage on android",
+            "Object storage for a web application",
             "android studio save string shared preference, start activity and load the saved string",
-            "Object storage for a web application"
-
+            "Quick question about storage on android"
         ]
 
         cy.visit("http://localhost:3000");
@@ -1202,7 +1209,7 @@ describe("Cypress Tests for Final Project", () => {
         //check if the length of commented questions is the same as qList for prevent duplicates
         cy.get(".postTitle").should('have.length', qList.length);
 
-        //Check if questions are the same in the qlist
+        //Check if questions have the same order in the qList, most recent commented question should be on the top
         cy.get(".postTitle").each(($el, index, $list) => {
             cy.wrap($el).should("contain", qList[index]);
         });

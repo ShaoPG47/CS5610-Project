@@ -1,9 +1,7 @@
 const express = require("express")
-const Question = require("../models/questions");
 const User = require("../models/users")
 const Answer = require('../models/answers')
 const Acomment = require("../models/aComments")
-const Qcomment = require("../models/qComments");
 
 const router = express.Router();
 

@@ -20,9 +20,10 @@ const addUser = async (req, res) => {
         }
 
         const newUser = await User.create({
-            username,
-            password,
-            useremail
+            username: username,
+            password: password,
+            useremail: useremail,
+            createdDate: new Date()
         })
 
         const date = new Date(newUser.createdDate)

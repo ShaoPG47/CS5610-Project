@@ -68,22 +68,51 @@ The following path contains all my e2e tests, it has 10 sections, 60 tests total
 ## For each server endpoint indicate the test
 
 - Answer Comment controller tests
-  - ../web-dev-final-project-malhar-pengli/server/tests/aComment.test.js
+```pycon
+../web-dev-final-project-malhar-pengli/server/tests/aComment.test.js
+```
+
 - Answer controller tests
-  - ../web-dev-final-project-malhar-pengli/server/tests/answer.test.js
+```pycon
+../web-dev-final-project-malhar-pengli/server/tests/newAnswer.test.js
+```
+
 - login controller tests
-  - ../web-dev-final-project-malhar-pengli/server/tests/login.test.js
+```pycon
+../web-dev-final-project-malhar-pengli/server/tests/login.test.js
+```
+
 - signup controller tests
-  - ../web-dev-final-project-malhar-pengli/server/tests/signup.test.js
+```pycon
+../web-dev-final-project-malhar-pengli/server/tests/signup.test.js
+```
+
 - User controller tests
-  - ../web-dev-final-project-malhar-pengli/server/tests/user.test.js
-  - ../web-dev-final-project-malhar-pengli/server/tests/userutils.test.js
+```pycon
+../web-dev-final-project-malhar-pengli/server/tests/user.test.js
+```
+
+```pycon
+../web-dev-final-project-malhar-pengli/server/tests/userutils.test.js
+```
+
 - Question Comment controller tests
-  - ../web-dev-final-project-malhar-pengli/server/tests/qComment.test.js
+```pycon
+../web-dev-final-project-malhar-pengli/server/tests/qComment.test.js
+```
+
 - Question controller tests
-  - ../web-dev-final-project-malhar-pengli/server/tests/question.test.js
+```pycon
+../web-dev-final-project-malhar-pengli/server/tests/question.test.js
+```
+```pycon
+../web-dev-final-project-malhar-pengli/server/tests/newQuestion.test.js
+```
+
 - Tag controller tests
-  - ../web-dev-final-project-malhar-pengli/server/tests/tags.test.js
+```pycon
+../web-dev-final-project-malhar-pengli/server/tests/tags.test.js
+```
 
 
 ## Instructions to generate and view coverage report 

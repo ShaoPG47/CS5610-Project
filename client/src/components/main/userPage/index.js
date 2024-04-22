@@ -35,7 +35,7 @@ const UserPage = ({
             <UserHeader
                 username = {username}
                 useremail={useremail}
-                userCreatedData = {userCreatedDate}
+                userCreatedDate = {userCreatedDate}
                 setQuestionFilter = {setQuestionFilter}
             />
             <div id="question_list" className="question_list">

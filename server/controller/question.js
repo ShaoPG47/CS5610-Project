@@ -1,7 +1,5 @@
 const express = require("express");
 const Question = require("../models/questions");
-//const Answer = require("../models/answers");
-//const Tag = require('../models/tags')
 const { addTag, getQuestionsByOrder, filterQuestionsBySearch } = require('../utils/question');
 
 const User = require('../models/users')

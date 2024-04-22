@@ -27,7 +27,7 @@ const getUserData = async (req, res) => {
         if (!user) {
             return res.status(404).json({message: "User do not exist"})
         }
-        const date = new Date(user.createdDate)
+        const date = user.createdDate
         const createdDate = (date.getMonth() +1) + '/' + date.getDate() + '/' + date.getFullYear();
         res.json({
             username: user.username,
